@@ -1,11 +1,10 @@
 import React from 'react';
-
-import { Header } from "@/app/components/Header";
+import SearchForm from "../components/SearchForm";
 
 const SearchPage = () => {
 	return (
 		<>
-			<Header />
+			<SearchForm />
 		</>
 	)
 }

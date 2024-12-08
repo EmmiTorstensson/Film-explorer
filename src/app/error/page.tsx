@@ -1,9 +1,9 @@
-import { Header } from "@/app/components/Header";
+import React from 'react';
 
 const ErrorPage = () => {
 	return (
 		<>
-			<Header />
+			<h1>404</h1>
 		</>
 	)
 }

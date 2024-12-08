@@ -1,0 +1,10 @@
+.ul {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.ul li {
+	list-style: none;
+	padding: 8px 4px;
+}
