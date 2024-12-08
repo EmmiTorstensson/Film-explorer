@@ -5,6 +5,7 @@ import SearchForm from "../components/SearchForm";
 const SearchPage = () => {
 	return (
 		<>
+			<h1>Search</h1>
 			<SearchForm />
 		</>
 	)
