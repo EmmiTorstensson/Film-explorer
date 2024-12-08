@@ -4,7 +4,8 @@ import { NextResponse } from 'next/server';
 export async function GET(request: Request) {
 	const apiKey = process.env.TMDB_API_KEY;
 
-	const query = "Avatar";
+	const url = new URL(request.url);
+	const query = url.searchParams.get('query')
 
 	try {
 		const response 	= await axios.get("https://api.themoviedb.org/3/search/movie", {

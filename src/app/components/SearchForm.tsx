@@ -1,12 +1,24 @@
+import axios from "axios";
 import { useState } from "react";
+import SearchResult from "./SearchResult";
 
 const SearchForm = () => {
 	const [query, setQuery] = useState("");
+	const [result, setResult] = useState([]);
 
 	const handleSearch = async (e) => {
 		e.preventDefault();
 
-		console.log(query)
+		try {
+			const response = await axios.get(`/api/search?query=${encodeURIComponent(query)}`);
+			const data = await response.data;
+
+			setResult(data)
+			console.log(result)
+
+		} catch(error) {
+			console.error("Error getting data", error);
+		}
 	}
 
 	return (
@@ -20,6 +32,7 @@ const SearchForm = () => {
 				/>
 				<button type="submit">Search</button>
 			</form>
+			<SearchResult result={result} />
 		</>
 	)
 }
