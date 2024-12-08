@@ -1,4 +1,5 @@
 import React from 'react';
+import Movie from './Movie';
 
 interface SearchResultProps {
 	result: any[];
@@ -10,7 +11,13 @@ const SearchResult: React.FC<SearchResultProps> = ({result}) => {
 			{result.length > 0 && (
 				<ul>
 					{result.map((movie) => (
-						<li key={movie.id}>{movie.title}</li>
+						<li key={movie.id}>
+							<Movie 
+								title={movie.title}
+								release_date={movie.release_date}
+								poster_path={movie.poster_path}
+							/>
+						</li>
 					))}
 				</ul>
 			)}

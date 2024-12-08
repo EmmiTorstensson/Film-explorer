@@ -17,6 +17,8 @@ export async function GET(request: Request) {
 			}
 		})
 
+		console.log(response.data)
+
 		return NextResponse.json(response.data.results)
 	} catch(error) {
 		console.error('Error searching for movies:', error.response ? error.response.data : error.message);
