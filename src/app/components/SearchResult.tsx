@@ -13,6 +13,7 @@ const SearchResult: React.FC<SearchResultProps> = ({result}) => {
 					{result.map((movie) => (
 						<li key={movie.id}>
 							<Movie 
+								id={movie.id}
 								title={movie.title}
 								release_date={movie.release_date}
 								poster_path={movie.poster_path}

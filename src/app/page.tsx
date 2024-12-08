@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Movie from './components/Movie';
+import Favourites from './components/Favourites';
 
 const HomePage = () => {
 	const [topMovies, setTopMovies] = useState([]);
@@ -38,6 +39,8 @@ const HomePage = () => {
 					</li>
 				))}
 			</ul>
+
+			<Favourites />
 		</>
 	)
 }
